@@ -36,6 +36,7 @@ int http_reply_json(struct http_conn *conn, const char *sessid,
 			 "Content-Type: %s\r\n"
 			 "Content-Length: %zu\r\n"
 			 "Access-Control-Allow-Origin: *\r\n"
+             "Access-Control-Expose-Headers: Session-ID\r\n"
 			 "Session-ID: %s\r\n"
 			 "\r\n"
 			 "%s",
