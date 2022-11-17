@@ -9,14 +9,14 @@
 #ifdef HAVE_GETOPT
 #include <getopt.h>
 #endif
-#include <re.h>
+#include <re/re.h>
 #include <baresip.h>
 #include "demo.h"
 
 
 #define DEBUG_MODULE "baresip-webrtc"
 #define DEBUG_LEVEL 6
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 enum { ASYNC_WORKERS = 4 };
 
