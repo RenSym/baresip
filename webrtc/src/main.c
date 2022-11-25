@@ -39,8 +39,7 @@ static const char *modv[] = {
 	"vp8",
 	"avcodec",
 	"vp9",
-	"avformat",
-	"fakevideo"
+	"avformat"
 };
 
 static const char *ice_server = NULL;
@@ -70,7 +69,7 @@ static void usage(void)
 		   "Usage: baresip-webrtc [options]\n"
 		   "\n"
 		   "options:\n"
-                   "\t-h               Help\n"
+           "\t-h               Help\n"
 		   "\t-v               Verbose debug\n"
 		   "\n"
 		   "http:\n"
@@ -198,7 +197,7 @@ int main(int argc, char *argv[])
 
 	str_ncpy(config->video.src_mod, "avformat",
 		 sizeof(config->video.src_mod));
-	str_ncpy(config->video.src_dev, "lavfi,testsrc2",
+	str_ncpy(config->video.src_dev, "rtsps://172.17.31.1:7441/WsMfBUMihqM31jEg?enableSrtp",
 		 sizeof(config->video.src_dev));
 
 	config->audio.level = true;
